@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const menuItem = e.target.closest('.item');
             const itemName = menuItem.textContent.trim().replace('+', '');
             addToCart(itemName);
-            menuItem.style.display = 'none'; // Hide the item from the menu
+            
         }
     });
 
@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 cartItems.appendChild(itemElement);
                 total += cart[item] * 5; // Assuming each item costs $5
+                console.log(`${item}=${cart[item]}`)
             }
         }
         totalElement.textContent = `TOTAL: $${total}`;
