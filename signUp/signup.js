@@ -29,6 +29,7 @@ document.getElementById("sign-up-button").addEventListener("click", (e) => {
   e.preventDefault();
   const phoneNum = document.getElementById("PhoneNum").value;
   const password = document.getElementById("Password").value;
+  const name = document.getElementById("Name").value;
   if (phoneNum == "" || password == "") {
     alert("Please Enter Phone Number and Password");
   } else {
@@ -38,8 +39,9 @@ document.getElementById("sign-up-button").addEventListener("click", (e) => {
           alert("User Exists");
         } else {
           set(ref(database, "users/" + phoneNum), {
+            Name: name,
             PhoneNumber: phoneNum,
-            Password: password,
+            Password: password
           })
             .then(() => {
               alert("User Created   " + "  Redirecting...");
