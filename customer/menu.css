@@ -85,7 +85,14 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+.item span {
+    position: relative;
+    margin-left: auto;
+    
+} 
 .item button {
+    margin-left: 10px;
+    margin-right: 10px;
     background-color: #66cc66;
     border: none;
     color: white;
