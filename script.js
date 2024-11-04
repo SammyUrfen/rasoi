@@ -42,7 +42,7 @@ document.getElementById("login-button").addEventListener("click", (e) => {
             alert("Incorrect Password");
           }
         } else {
-          alert("User Does Not Exist");
+          alert("User Does Not Exist\n"+"Please SignUp");
         }
       })
       .catch((error) => {

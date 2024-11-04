@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menuElement.addEventListener('click', function(e) {
         if (e.target.id === 'menu') {
             const menuItem = e.target.closest('.item');
-            const itemName = menuItem.textContent.trim().replace('+', '');
+            const itemName = menuItem.childNodes[0].textContent.trim();
             addToCart(itemName);
             
         }
